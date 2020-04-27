@@ -1,0 +1,63 @@
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Turnos Nro {{ CAMPOS.id|e }}
+            </h2>
+        </div><div class="body">
+                                        <form id="myForm" action="app/" method="post">
+                                        <input type="hidden" name="tabla" value="turnos"><input type="hidden" name="accion" value="add"><div class="form-group form-float">
+                                        <div class="form-line oculto">
+                                           <input type="number" class="form-control input-control" id="id" name="id" aria-describedby="emailHelp"  readonly="readonly"  placeholder="" required value="{{ CAMPOS.id|e }}">
+                                            <label class="form-label">id</label>
+                                        </div>
+                                    </div>
+                                     <div class="form-group form-float oculto">
+                                            <div class="form-line">
+                                                <input type="number" class="form-control input-control" id="id_cliente" name="id_cliente" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.id_cliente|e }}">
+                                                <label class="form-label">idCliente</label>
+                                            </div>
+                                        </div>
+                                            <div class="form-group form-float">
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control input-control" id="desc_cliente" name="desc_cliente" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.desc_cliente|e }}">
+                                                    <label class="form-label">Paciente1</label>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group form-float oculto">
+                                        <div class="form-line">
+                                           <input type="number" class="form-control input-control" id="id_usu" name="id_usu" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.id_usu|e }}">
+                                            <label class="form-label">idUsu</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-float ">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control date" id="fch_turno_desc" name="fch_turno_desc" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.fch_turno_desc|e }}">
+                                            <label class="form-label">fchTurno</label>
+                                        </div>
+                                    </div>
+                                            <div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="turno_desc" name="turno_desc" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.turno_desc|e }}">
+                                            <label class="form-label">turnoDesc</label>
+                                        </div>
+                                    </div><div class="form-group form-float oculto">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="fch_alta" name="fch_alta" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.fch_alta|e }}">
+                                            <label class="form-label">fchAlta</label>
+                                        </div>
+                                    </div><div class="form-group form-float oculto">
+                                        <div class="form-line">
+                                           <input type="number" class="form-control input-control" id="id_usu_alta" name="id_usu_alta" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.id_usu_alta|e }}">
+                                            <label class="form-label">idUsuAlta</label>
+                                        </div>
+                                    </div><div class="form-group form-float oculto">
+                                        <div class="form-line">
+                                           <input type="number" class="form-control input-control" id="usuarioid" name="usuarioid" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.usuarioid|e }}">
+                                            <label class="form-label">usuarioid</label>
+                                        </div>
+                                    </div><button  class="btn btn-primary" type="submit">Guardar</button><a  href="javascript:void(0)" class="btn btn-primary" onclick="ver_tabla('turnos')">Regresar</a></form></div>
+</div>
+        </div>

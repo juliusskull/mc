@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="body">
+<table id="example" class="table table-bordered table-striped table-hover js-basic-example dataTable" cellspacing="0" width="100%">
+<thead>
+<tr>
+<th>id</th>
+<th>Dia</th>
+<th>Hora</th>
+<th>Paciente</th>
+<th>fch_turno</th>
+<th>turno_desc</th>
+<th></th>
+</tr>
+</thead>
+    <tfoot>
+    <tr>
+        <th>id</th>
+        <th>Dia</th>
+        <th>Hora</th>
+        <th>Paciente</th>
+        <th>fch_turno</th>
+        <th>turno_desc</th>
+        <th></th>
+    </tr>
+    </tfoot>
+<tbody>
+{% for num in CAMPOS %}
+<tr><td>{{num.id}}</td><td>{{num.DIA_SEMANA}}</td><td>{{num.hora}}</td><td>{{num.desc_cliente}}</td><td>{{num.fch_turno}}</td><td>{{num.turno_desc}}</td><td><button type="button" class="btn btn-default" onclick="ver_form('turnos',{{num.id}})"><span class="glyphicon glyphicon-search"></span></button><button type="button" class="btn btn-primary" onclick="ver_form_modificar('turnos',{{num.id}})"><span class="glyphicon glyphicon-pencil"></span></button><button type="button" class="btn btn-danger" onclick="borrar('turnos',{{num.id}})"><span class="glyphicon glyphicon-remove"></span></button></td></tr>{% endfor %}
+</tbody>
+</table>
+    </div></div>

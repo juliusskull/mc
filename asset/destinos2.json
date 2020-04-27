@@ -1,0 +1,20 @@
+[{
+    "desc_destino": "SALTA",
+    "id_destino": "1"
+}, {
+    "desc_destino": "BUENOS AIRES",
+    "id_destino": "2"
+}
+    , {
+    "desc_destino": "CORDOBA",
+    "id_destino": "3"
+}
+    , {
+    "desc_destino": "JUJUY",
+    "id_destino": "4"
+}
+    , {
+    "desc_destino": "TUCUMAN",
+    "id_destino": "5"
+}
+]

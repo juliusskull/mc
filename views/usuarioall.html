@@ -1,0 +1,15 @@
+<table id="example" class="table table-bordered table-striped table-hover js-basic-example dataTable" cellspacing="0" width="100%">
+<thead> <tr>
+<th>usuario</th>
+<th>password</th>
+<th>id</th>
+<th>mail</th>
+<th>tipo</th>
+<th>fchalta</th>
+<th>IMEI</th>
+<th></th></thead>
+<tbody>
+{% for num in CAMPOS %}
+<tr><td>{{num.usuario}}</td><td>{{num.password}}</td><td>{{num.id}}</td><td>{{num.mail}}</td><td>{{num.tipo}}</td><td>{{num.fchalta}}</td><td>{{num.IMEI}}</td><td><button type="button" class="btn btn-default" onclick="ver_form('usuario',{{num.id}})"><span class="glyphicon glyphicon-search"></span></button><button type="button" class="btn btn-primary" onclick="ver_form_modificar('usuario',{{num.id}})"><span class="glyphicon glyphicon-pencil"></span></button><button type="button" class="btn btn-danger" onclick="borrar('usuario',{{num.id}})"><span class="glyphicon glyphicon-remove"></span></button></td></tr>{% endfor %}
+</tbody>
+</table>

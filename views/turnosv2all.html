@@ -1,0 +1,16 @@
+<table id="example" class="table table-bordered table-striped table-hover js-basic-example dataTable" cellspacing="0" width="100%">
+<thead> <tr>
+<th>id</th>
+<th>id_cliente</th>
+<th>id_usu</th>
+<th>fch_turno</th>
+<th>turno_desc</th>
+<th>fch_alta</th>
+<th>id_usu_alta</th>
+<th>usuarioid</th>
+<th></th></thead>
+<tbody>
+{% for num in CAMPOS %}
+<tr><td>{{num.id}}</td><td>{{num.id_cliente}}</td><td>{{num.id_usu}}</td><td>{{num.fch_turno}}</td><td>{{num.turno_desc}}</td><td>{{num.fch_alta}}</td><td>{{num.id_usu_alta}}</td><td>{{num.usuarioid}}</td><td><button type="button" class="btn btn-default" onclick="ver_form('turnosv2',{{num.id}})"><span class="glyphicon glyphicon-search"></span></button><button type="button" class="btn btn-primary" onclick="ver_form_modificar('turnosv2',{{num.id}})"><span class="glyphicon glyphicon-pencil"></span></button><button type="button" class="btn btn-danger" onclick="borrar('turnosv2',{{num.id}})"><span class="glyphicon glyphicon-remove"></span></button></td></tr>{% endfor %}
+</tbody>
+</table>

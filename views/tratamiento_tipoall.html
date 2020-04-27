@@ -1,0 +1,15 @@
+<table id="example" class="table table-bordered table-striped table-hover js-basic-example dataTable" cellspacing="0" width="100%">
+<thead> <tr>
+<th>id</th>
+<th>nombre</th>
+<th>fecha_alta</th>
+<th>id_usu_alta</th>
+<th>id_usu_cad</th>
+<th>fch_cad</th>
+<th>usuarioid</th>
+<th></th></thead>
+<tbody>
+{% for num in CAMPOS %}
+<tr><td>{{num.id}}</td><td>{{num.nombre}}</td><td>{{num.fecha_alta}}</td><td>{{num.id_usu_alta}}</td><td>{{num.id_usu_cad}}</td><td>{{num.fch_cad}}</td><td>{{num.usuarioid}}</td><td><button type="button" class="btn btn-default" onclick="ver_form('tratamiento_tipo',{{num.id}})"><span class="glyphicon glyphicon-search"></span></button><button type="button" class="btn btn-primary" onclick="ver_form_modificar('tratamiento_tipo',{{num.id}})"><span class="glyphicon glyphicon-pencil"></span></button><button type="button" class="btn btn-danger" onclick="borrar('tratamiento_tipo',{{num.id}})"><span class="glyphicon glyphicon-remove"></span></button></td></tr>{% endfor %}
+</tbody>
+</table>

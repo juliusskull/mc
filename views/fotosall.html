@@ -1,0 +1,18 @@
+<table id="example" class="table table-bordered table-striped table-hover js-basic-example dataTable" cellspacing="0" width="100%">
+<thead> <tr>
+<th>id</th>
+<th>id_cliente</th>
+<th>archivo</th>
+<th>tipo</th>
+<th>size</th>
+<th>foto_desc</th>
+<th>foto_observacion</th>
+<th>fch_alta</th>
+<th>id_usu_alta</th>
+<th>usuarioid</th>
+<th></th></thead>
+<tbody>
+{% for num in CAMPOS %}
+<tr><td>{{num.id}}</td><td>{{num.id_cliente}}</td><td>{{num.archivo}}</td><td>{{num.tipo}}</td><td>{{num.size}}</td><td>{{num.foto_desc}}</td><td>{{num.foto_observacion}}</td><td>{{num.fch_alta}}</td><td>{{num.id_usu_alta}}</td><td>{{num.usuarioid}}</td><td><button type="button" class="btn btn-default" onclick="ver_form('fotos',{{num.id}})"><span class="glyphicon glyphicon-search"></span></button><button type="button" class="btn btn-primary" onclick="ver_form_modificar('fotos',{{num.id}})"><span class="glyphicon glyphicon-pencil"></span></button><button type="button" class="btn btn-danger" onclick="borrar('fotos',{{num.id}})"><span class="glyphicon glyphicon-remove"></span></button></td></tr>{% endfor %}
+</tbody>
+</table>

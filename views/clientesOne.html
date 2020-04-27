@@ -1,0 +1,101 @@
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Clientes Nro {{ CAMPOS.id|e }}
+            </h2>
+        </div><div class="body">
+<form id="myForm" action="app/" method="post">
+<input type="hidden" name="tabla" value="clientes"><input type="hidden" name="accion" value="add"><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="number" class="form-control input-control" id="id" name="id" aria-describedby="emailHelp"  readonly="readonly"  placeholder="" required value="{{ CAMPOS.id|e }}">
+                                            <label class="form-label">id</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="nombre" name="nombre" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.nombre|e }}">
+                                            <label class="form-label">Nombre</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="apellido" name="apellido" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.apellido|e }}">
+                                            <label class="form-label">Apellido</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-float">
+                                        <label class="form-label">Fecha Nac</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" class="datepicker form-control" placeholder="seleccione un fecha" id="fecha_nac" name="fecha_nac" value="{{ CAMPOS.fecha_nac|e }}" onfocusout="calcular_edad()">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group form-float">
+                                        <label class="form-label">Edad</label>
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" placeholder="seleccione un fecha" id="edad" name="edad" value="{{ CAMPOS.edad|e }}">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="peso" name="peso" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.peso|e }}">
+                                            <label class="form-label">peso</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="telefono1" name="telefono1" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.telefono1|e }}">
+                                            <label class="form-label">telefono1</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="dni" name="dni" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.dni|e }}">
+                                            <label class="form-label">dni</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="sexo" name="sexo" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.sexo|e }}">
+                                            <label class="form-label">sexo</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="direccion" name="direccion" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.direccion|e }}">
+                                            <label class="form-label">direccion</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="ciudad" name="ciudad" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.ciudad|e }}">
+                                            <label class="form-label">ciudad</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="fch_alta" name="fch_alta" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.fch_alta|e }}">
+                                            <label class="form-label">fchAlta</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="number" class="form-control input-control" id="id_usu_alta" name="id_usu_alta" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.id_usu_alta|e }}">
+                                            <label class="form-label">idUsuAlta</label>
+                                        </div>
+                                    </div>  <div class="form-group form-float">
+        <div class="form-line">
+            <label for="estado">estado</label>
+            <select id="estado" name="estado" class="form-control">
+                <option value="{{ CAMPOS.estado|e }}" >{{ CAMPOS.estado|e }}</option>
+                {% for estado in ESTADOS %}
+                <option value="{{estado.ESTADO}}" >{{estado.DESC_ESTADO}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="number" class="form-control input-control" id="usuarioid" name="usuarioid" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.usuarioid|e }}">
+                                            <label class="form-label">usuarioid</label>
+                                        </div>
+                                    </div><button  class="btn btn-primary" type="submit">Guardar</button><a  href="javascript:void(0)" class="btn btn-primary" onclick="ver_tabla('clientes')">Regresar</a></form></div>
+</div>
+        </div>

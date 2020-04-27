@@ -1,0 +1,25 @@
+[
+
+    {
+        "link": "javascript:void(0)",
+        "descripcion": "Gestion de Pacientes",
+        "icono": "extension",
+        "permisos": "0",
+        "click": "ver_tabla('clientes')"
+    },
+    {
+        "link": "javascript:void(0)",
+        "descripcion": "Turnos",
+        "icono": "extension",
+        "permisos": "0",
+        "click": "ver_tabla('turnos')"
+    }
+    ,
+    {
+        "link": "#",
+        "descripcion": "ayuda",
+        "icono": "extension",
+        "permisos": "0",
+        "click": ""
+    }
+]

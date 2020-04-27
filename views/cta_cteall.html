@@ -1,0 +1,18 @@
+<table id="example" class="table table-bordered table-striped table-hover js-basic-example dataTable" cellspacing="0" width="100%">
+<thead> <tr>
+<th>id</th>
+<th>id_cliente</th>
+<th>monto</th>
+<th>presupuesto</th>
+<th>fch_alta</th>
+<th>id_usu_alta</th>
+<th>fch_cad</th>
+<th>id_usu_cad</th>
+<th>fch_inicio</th>
+<th>usuarioid</th>
+<th></th></thead>
+<tbody>
+{% for num in CAMPOS %}
+<tr><td>{{num.id}}</td><td>{{num.id_cliente}}</td><td>{{num.monto}}</td><td>{{num.presupuesto}}</td><td>{{num.fch_alta}}</td><td>{{num.id_usu_alta}}</td><td>{{num.fch_cad}}</td><td>{{num.id_usu_cad}}</td><td>{{num.fch_inicio}}</td><td>{{num.usuarioid}}</td><td><button type="button" class="btn btn-default" onclick="ver_form('cta_cte',{{num.id}})"><span class="glyphicon glyphicon-search"></span></button><button type="button" class="btn btn-primary" onclick="ver_form_modificar('cta_cte',{{num.id}})"><span class="glyphicon glyphicon-pencil"></span></button><button type="button" class="btn btn-danger" onclick="borrar('cta_cte',{{num.id}})"><span class="glyphicon glyphicon-remove"></span></button></td></tr>{% endfor %}
+</tbody>
+</table>

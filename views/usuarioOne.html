@@ -1,0 +1,46 @@
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Usuario Nro {{ CAMPOS.id|e }}
+            </h2>
+        </div><div class="body">
+<form id="myForm" action="app/" method="post">
+<input type="hidden" name="tabla" value="usuario"><input type="hidden" name="accion" value="add"><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="usuario" name="usuario" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.usuario|e }}">
+                                            <label class="form-label">usuario</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="password" name="password" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.password|e }}">
+                                            <label class="form-label">password</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="number" class="form-control input-control" id="id" name="id" aria-describedby="emailHelp"  readonly="readonly"  placeholder="" required value="{{ CAMPOS.id|e }}">
+                                            <label class="form-label">id</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="mail" name="mail" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.mail|e }}">
+                                            <label class="form-label">mail</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="number" class="form-control input-control" id="tipo" name="tipo" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.tipo|e }}">
+                                            <label class="form-label">tipo</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="fchalta" name="fchalta" aria-describedby="emailHelp"  placeholder=""  value="{{ CAMPOS.fchalta|e }}">
+                                            <label class="form-label">fchalta</label>
+                                        </div>
+                                    </div><div class="form-group form-float">
+                                        <div class="form-line">
+                                           <input type="text" class="form-control input-control" id="IMEI" name="IMEI" aria-describedby="emailHelp"  placeholder="" required value="{{ CAMPOS.IMEI|e }}">
+                                            <label class="form-label">IMEI</label>
+                                        </div>
+                                    </div><button  class="btn btn-primary" type="submit">Guardar</button><a  href="javascript:void(0)" class="btn btn-primary" onclick="ver_tabla('usuario')">Regresar</a></form></div>
+</div>
+        </div>
